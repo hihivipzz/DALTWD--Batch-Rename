@@ -1,0 +1,17 @@
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\obj\Debug\Batch Rename.csproj.AssemblyReference.cache
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\obj\Debug\Batch Rename.csproj.SuggestedBindingRedirects.cache
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\obj\Debug\MainWindow.g.cs
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\obj\Debug\App.g.cs
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\obj\Debug\Batch Rename_MarkupCompile.cache
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\obj\Debug\Batch Rename_MarkupCompile.lref
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\bin\Debug\Batch Rename.exe.config
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\bin\Debug\Batch Rename.exe
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\bin\Debug\Batch Rename.pdb
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\obj\Debug\MainWindow.baml
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\obj\Debug\Batch Rename.g.resources
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\obj\Debug\Batch_Rename.Properties.Resources.resources
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\obj\Debug\Batch Rename.csproj.GenerateResource.cache
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\obj\Debug\Batch Rename.csproj.CoreCompileInputs.cache
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\obj\Debug\Batch Rename.exe
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\obj\Debug\Batch Rename.pdb
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\obj\Debug\GeneratedInternalTypeHelper.g.cs

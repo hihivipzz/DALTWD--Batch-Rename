@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5EABBC1B-C11B-42FD-88F2-C029E3ED3858}</ProjectGuid>
+    <ProjectGuid>{0F8A4972-47A6-4E61-B80D-F51C50ACD19C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Batch_Rename</RootNamespace>
     <AssemblyName>Batch Rename</AssemblyName>
@@ -35,8 +35,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationFramework.Aero2" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,6 +57,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="PreviewRenameConverter.cs" />
     <Compile Include="RuleFactory.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -96,10 +99,32 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Contract\Contract.csproj">
-      <Project>{21e38601-e18e-492e-a0ac-7712c8c9e189}</Project>
-      <Name>Contract</Name>
-    </ProjectReference>
+    <Resource Include="images\batch.png" />
+    <Resource Include="images\help.png" />
+    <Resource Include="images\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\clear.png" />
+    <Resource Include="images\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\down%282%29.png" />
+    <Resource Include="images\down.png" />
+    <Resource Include="images\up%282%29.png" />
+    <Resource Include="images\up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\save.png" />
+    <Resource Include="images\upload-file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\add-rule.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\remove.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

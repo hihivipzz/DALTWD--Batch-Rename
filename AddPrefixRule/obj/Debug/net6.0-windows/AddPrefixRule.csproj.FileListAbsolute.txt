@@ -1,0 +1,15 @@
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\AddPrefixRule\bin\Debug\net6.0-windows\AddPrefixRule.deps.json
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\AddPrefixRule\bin\Debug\net6.0-windows\AddPrefixRule.dll
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\AddPrefixRule\bin\Debug\net6.0-windows\AddPrefixRule.pdb
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\AddPrefixRule\bin\Debug\net6.0-windows\Contract.dll
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\AddPrefixRule\bin\Debug\net6.0-windows\Contract.pdb
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\AddPrefixRule\obj\Debug\net6.0-windows\AddPrefixRule.csproj.AssemblyReference.cache
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\AddPrefixRule\obj\Debug\net6.0-windows\AddPrefixRule.GeneratedMSBuildEditorConfig.editorconfig
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\AddPrefixRule\obj\Debug\net6.0-windows\AddPrefixRule.AssemblyInfoInputs.cache
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\AddPrefixRule\obj\Debug\net6.0-windows\AddPrefixRule.AssemblyInfo.cs
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\AddPrefixRule\obj\Debug\net6.0-windows\AddPrefixRule.csproj.CoreCompileInputs.cache
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\AddPrefixRule\obj\Debug\net6.0-windows\AddPrefixRule.csproj.CopyComplete
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\AddPrefixRule\obj\Debug\net6.0-windows\AddPrefixRule.dll
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\AddPrefixRule\obj\Debug\net6.0-windows\refint\AddPrefixRule.dll
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\AddPrefixRule\obj\Debug\net6.0-windows\AddPrefixRule.pdb
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\AddPrefixRule\obj\Debug\net6.0-windows\ref\AddPrefixRule.dll

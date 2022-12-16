@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Batch_Rename"
         mc:Ignorable="d"
-        Title="Batch Rename" Height="720" Width="1280" Loaded="Window_Loaded"
+        Title="Batch Rename" Height="720" Width="1280" Loaded="Window_Loaded" Closed="Window_Closed"
     xmlns:theme="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2">
     <Window.Resources>
         <local:PreviewRenameConverter x:Key="previewRenameConverter"/>
@@ -403,7 +403,7 @@
                     </StackPanel>
                 </Button>
                 <TextBlock Text="|" FontSize="16"></TextBlock>
-                <Button VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Button VerticalAlignment="Center" HorizontalAlignment="Center" Name="HelpButton" Click="HelpButton_Click">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/images/help.png" Height="16" Width="16"/>
                         <TextBlock Text=" Help" FontSize="15"></TextBlock>
@@ -451,16 +451,16 @@
                         </Button>
 
                         <TextBlock Text=" |" FontSize="15"></TextBlock>
-                        <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,0,0" Background="Transparent" BorderThickness="0" >
+                        <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,0,0" Background="Transparent" BorderThickness="0" Name="ToFirstRuleButton" Click="ToFirstRuleButton_Click" >
                             <Image Source="/images/up(2).png" RenderOptions.BitmapScalingMode="HighQuality" Height="16" Width="16"/>
                         </Button>
-                        <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,0,0" Background="Transparent" BorderThickness="0" >
+                        <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,0,0" Background="Transparent" BorderThickness="0" Name="ToUpRuleButton" Click="ToUpRuleButton_Click">
                             <Image Source="/images/up.png" RenderOptions.BitmapScalingMode="HighQuality" Height="16" Width="16"/>
                         </Button>
-                        <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,0,0" Background="Transparent" BorderThickness="0" >
+                        <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,0,0" Background="Transparent" BorderThickness="0"  Name="ToDownRuleButton" Click="ToDownRuleButton_Click">
                             <Image Source="/images/down.png"  RenderOptions.BitmapScalingMode="HighQuality" Height="16" Width="16"/>
                         </Button>
-                        <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,0,0" Background="Transparent" BorderThickness="0" >
+                        <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,0,0" Background="Transparent" BorderThickness="0"  Name="toBottomRuleButton" Click="toBottomRuleButton_Click">
                             <Image Source="/images/down(2).png" RenderOptions.BitmapScalingMode="HighQuality" Height="16" Width="16"/>
                         </Button>
                     </StackPanel>
@@ -490,6 +490,21 @@
                 </ToolBar>
             </ToolBarTray>
             <ListBox Height="612" Name="ActiveRulesListBox">
+                <ListBox.ItemContainerStyle>
+                    <Style>
+                        <Style.Triggers>
+                            <EventTrigger RoutedEvent="Control.PreviewMouseLeftButtonDown">
+                                <BeginStoryboard>
+                                    <Storyboard Storyboard.TargetProperty="(Selector.IsSelected)">
+                                        <BooleanAnimationUsingKeyFrames Duration="0:0:0">
+                                            <DiscreteBooleanKeyFrame Value="True" />
+                                        </BooleanAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </ListBox.ItemContainerStyle>
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Expander Template="{StaticResource SimpleExpanderTemp}" >
@@ -502,7 +517,7 @@
 
 
                                     <CheckBox Margin="5"></CheckBox>
-                                    <Button Background="Transparent" BorderThickness="0">
+                                    <Button Background="Transparent" BorderThickness="0" Name="DeleteThisRuleButton" Click="DeleteThisRuleButton_Click">
                                         <Image Source="/images/remove.png" Height="20" Width="20"/>
                                     </Button>
                                 </StackPanel>
@@ -532,8 +547,8 @@
                 </ListBox.ItemTemplate>
             </ListBox>
         </StackPanel>
-        <TabControl >
-            <TabItem>
+        <TabControl Name="TabControl">
+            <TabItem Name="TabControlFile" Height="26" Margin="-2,0,-2,0" VerticalAlignment="Bottom">
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="Rename Files" Height="20"/>
@@ -549,21 +564,28 @@
                                 </StackPanel>
                             </Button>
                             <TextBlock Text=" |" FontSize="15" Margin="5,0,0,5"/>
-                            <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,0,0" Background="Transparent" BorderThickness="0" >
+                            <Button VerticalAlignment="Center" HorizontalAlignment="Center" Name="AddFileFromFolderButton" Click="AddFileFromFolderButton_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="/images/folder.png" Height="16" Width="16" RenderOptions.BitmapScalingMode="HighQuality"/>
+                                    <TextBlock Text=" Load Folder" FontSize="15"></TextBlock>
+                                </StackPanel>
+                            </Button>
+                            <TextBlock Text=" |" FontSize="15" Margin="5,0,0,5"/>
+                            <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,0,0" Background="Transparent" BorderThickness="0" Name="ToFirstFileButton" Click="ToFirstFileButton_Click">
                                 <Image Source="/images/up(2).png" RenderOptions.BitmapScalingMode="HighQuality" Height="16" Width="16"/>
                             </Button>
-                            <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,0,0" Background="Transparent" BorderThickness="0" >
+                            <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,0,0" Background="Transparent" BorderThickness="0" Name="ToUpFileButton" Click="ToUpFileButton_Click">
                                 <Image Source="/images/up.png" RenderOptions.BitmapScalingMode="HighQuality" Height="16" Width="16"/>
                             </Button>
-                            <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,0,0" Background="Transparent" BorderThickness="0" >
+                            <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,0,0" Background="Transparent" BorderThickness="0" Name="ToLowFileButton" Click="ToLowFileButton_Click">
                                 <Image Source="/images/down.png"  RenderOptions.BitmapScalingMode="HighQuality" Height="16" Width="16"/>
                             </Button>
-                            <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,0,0" Background="Transparent" BorderThickness="0" >
+                            <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,0,0" Background="Transparent" BorderThickness="0" Name="ToBottomFileButton" Click="ToBottomFileButton_Click" >
                                 <Image Source="/images/down(2).png" RenderOptions.BitmapScalingMode="HighQuality" Height="16" Width="16"/>
                             </Button>
                         </ToolBar>
                     </ToolBarTray>
-                    <ListView x:Name="sourceListView" Height="612" >
+                    <ListView x:Name="sourceListView" Height="612" AllowDrop="True"  Drop="sourceListView_Drop">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Header="Filename" Width="275" DisplayMemberBinding="{Binding ShortName}"></GridViewColumn>
@@ -576,7 +598,7 @@
                     </ListView>
                 </StackPanel>
             </TabItem>
-            <TabItem>
+            <TabItem Name="TabControlFolder">
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="Rename Folders" Height="20"/>
@@ -592,21 +614,22 @@
                                 </StackPanel>
                             </Button>
                             <TextBlock Text=" |" FontSize="15" Margin="5,0,0,5"/>
-                            <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,0,0" Background="Transparent" BorderThickness="0" >
+                            
+                            <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,0,0" Background="Transparent" BorderThickness="0" Click="ToFirstFileButton_Click" >
                                 <Image Source="/images/up(2).png" RenderOptions.BitmapScalingMode="HighQuality" Height="16" Width="16"/>
                             </Button>
-                            <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,0,0" Background="Transparent" BorderThickness="0" >
+                            <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,0,0" Background="Transparent" BorderThickness="0" Click="ToUpFileButton_Click">
                                 <Image Source="/images/up.png" RenderOptions.BitmapScalingMode="HighQuality" Height="16" Width="16"/>
                             </Button>
-                            <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,0,0" Background="Transparent" BorderThickness="0" >
+                            <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,0,0" Background="Transparent" BorderThickness="0" Click="ToDownRuleButton_Click">
                                 <Image Source="/images/down.png"  RenderOptions.BitmapScalingMode="HighQuality" Height="16" Width="16"/>
                             </Button>
-                            <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,0,0" Background="Transparent" BorderThickness="0" >
+                            <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,0,0" Background="Transparent" BorderThickness="0" Click="ToBottomFileButton_Click">
                                 <Image Source="/images/down(2).png" RenderOptions.BitmapScalingMode="HighQuality" Height="16" Width="16"/>
                             </Button>
                         </ToolBar>
                     </ToolBarTray>
-                    <ListView Height="612" x:Name="sourceFolderListView" >
+                    <ListView Height="612" x:Name="sourceFolderListView" AllowDrop="True" Drop="sourceFolderListView_Drop" >
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Header="Foldername" Width="275" DisplayMemberBinding="{Binding ShortName}"></GridViewColumn>

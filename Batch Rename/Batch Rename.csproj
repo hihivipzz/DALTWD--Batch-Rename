@@ -57,8 +57,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="HelpWindown.xaml.cs">
+      <DependentUpon>HelpWindown.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PreviewRenameConverter.cs" />
     <Compile Include="RuleFactory.cs" />
+    <Page Include="HelpWindown.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -125,6 +132,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\folder.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

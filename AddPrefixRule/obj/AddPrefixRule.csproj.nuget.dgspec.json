@@ -1,24 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Study\\Tailieu\\LapTrinhWindows\\DoAn\\DoAn1\\Batch Rename\\AddPrefixRule\\AddPrefixRule.csproj": {}
+    "D:\\C-Sharp\\DALTWD--Batch-Rename\\AddPrefixRule\\AddPrefixRule.csproj": {}
   },
   "projects": {
-    "D:\\Study\\Tailieu\\LapTrinhWindows\\DoAn\\DoAn1\\Batch Rename\\AddPrefixRule\\AddPrefixRule.csproj": {
+    "D:\\C-Sharp\\DALTWD--Batch-Rename\\AddPrefixRule\\AddPrefixRule.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Study\\Tailieu\\LapTrinhWindows\\DoAn\\DoAn1\\Batch Rename\\AddPrefixRule\\AddPrefixRule.csproj",
+        "projectUniqueName": "D:\\C-Sharp\\DALTWD--Batch-Rename\\AddPrefixRule\\AddPrefixRule.csproj",
         "projectName": "AddPrefixRule",
-        "projectPath": "D:\\Study\\Tailieu\\LapTrinhWindows\\DoAn\\DoAn1\\Batch Rename\\AddPrefixRule\\AddPrefixRule.csproj",
-        "packagesPath": "C:\\Users\\HP-OMEN\\.nuget\\packages\\",
-        "outputPath": "D:\\Study\\Tailieu\\LapTrinhWindows\\DoAn\\DoAn1\\Batch Rename\\AddPrefixRule\\obj\\",
+        "projectPath": "D:\\C-Sharp\\DALTWD--Batch-Rename\\AddPrefixRule\\AddPrefixRule.csproj",
+        "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
+        "outputPath": "D:\\C-Sharp\\DALTWD--Batch-Rename\\AddPrefixRule\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\HP-OMEN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0-windows"
+          "net6.0-windows7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -28,8 +32,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "D:\\Study\\Tailieu\\LapTrinhWindows\\DoAn\\DoAn1\\Batch Rename\\Contract\\Contract.csproj": {
-                "projectPath": "D:\\Study\\Tailieu\\LapTrinhWindows\\DoAn\\DoAn1\\Batch Rename\\Contract\\Contract.csproj"
+              "D:\\C-Sharp\\DALTWD--Batch-Rename\\Contract\\Contract.csproj": {
+                "projectPath": "D:\\C-Sharp\\DALTWD--Batch-Rename\\Contract\\Contract.csproj"
               }
             }
           }
@@ -49,38 +53,33 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            },
-            "Microsoft.WindowsDesktop.App.WPF": {
-              "privateAssets": "none"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.412\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Study\\Tailieu\\LapTrinhWindows\\DoAn\\DoAn1\\Batch Rename\\Contract\\Contract.csproj": {
+    "D:\\C-Sharp\\DALTWD--Batch-Rename\\Contract\\Contract.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Study\\Tailieu\\LapTrinhWindows\\DoAn\\DoAn1\\Batch Rename\\Contract\\Contract.csproj",
+        "projectUniqueName": "D:\\C-Sharp\\DALTWD--Batch-Rename\\Contract\\Contract.csproj",
         "projectName": "Contract",
-        "projectPath": "D:\\Study\\Tailieu\\LapTrinhWindows\\DoAn\\DoAn1\\Batch Rename\\Contract\\Contract.csproj",
-        "packagesPath": "C:\\Users\\HP-OMEN\\.nuget\\packages\\",
-        "outputPath": "D:\\Study\\Tailieu\\LapTrinhWindows\\DoAn\\DoAn1\\Batch Rename\\Contract\\obj\\",
+        "projectPath": "D:\\C-Sharp\\DALTWD--Batch-Rename\\Contract\\Contract.csproj",
+        "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
+        "outputPath": "D:\\C-Sharp\\DALTWD--Batch-Rename\\Contract\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\HP-OMEN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0-windows"
+          "net6.0-windows7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -107,20 +106,11 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            },
-            "Microsoft.WindowsDesktop.App.WPF": {
-              "privateAssets": "none"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.412\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -17,3 +17,21 @@ D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\obj\Debug\
 D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\obj\Debug\GeneratedInternalTypeHelper.g.cs
 D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\obj\Debug\HelpWindown.g.cs
 D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\obj\Debug\HelpWindown.baml
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\Batch Rename.exe.config
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\Batch Rename.exe
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\Batch Rename.pdb
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\obj\Debug\Batch Rename.csproj.AssemblyReference.cache
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\obj\Debug\HelpWindown.g.cs
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\obj\Debug\MainWindow.g.cs
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\obj\Debug\App.g.cs
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\obj\Debug\Batch Rename_MarkupCompile.cache
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\obj\Debug\Batch Rename_MarkupCompile.lref
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\obj\Debug\HelpWindown.baml
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\obj\Debug\MainWindow.baml
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\obj\Debug\Batch Rename.g.resources
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\obj\Debug\Batch_Rename.Properties.Resources.resources
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\obj\Debug\Batch Rename.csproj.GenerateResource.cache
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\obj\Debug\Batch Rename.csproj.CoreCompileInputs.cache
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\obj\Debug\Batch Rename.exe
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\obj\Debug\Batch Rename.pdb

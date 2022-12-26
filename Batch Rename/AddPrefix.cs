@@ -1,20 +1,20 @@
-using Contract;
 using System;
+using System.Text;
 
-namespace AddPrefixRule
+namespace Batch_Rename
 {
     public class AddPrefix : IRule
     {
         public string Prefix { get; set; }
 
-        public string Name => "AddPrefix";
+        public string Name => "Add Prefix";
 
         public AddPrefix()
         {
             Prefix = "";
         }
 
-        public IRule? Parse(string data)
+        public IRule Parse(string data)
         {
             var tokens = data.Split(new string[] { " " },
                 StringSplitOptions.None);
@@ -23,8 +23,10 @@ namespace AddPrefixRule
             var pairs = parsedData.Split(new string[] { "=" },
                 StringSplitOptions.None);
 
-            var rule = new AddPrefixRule();
-            rule.Prefix = pairs[1];
+            var rule = new AddPrefix
+            {
+                Prefix = pairs[1]
+            };
             return rule;
         }
 

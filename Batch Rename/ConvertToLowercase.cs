@@ -1,20 +1,14 @@
-using Contract;
-using System;
+﻿using System;
+using System.IO;
+using System.Text;
 
-namespace AddPrefixRule
+namespace Batch_Rename
 {
-    public class AddPrefix : IRule
+    public class ConvertToLowercase : IRule
     {
-        public string Prefix { get; set; }
+        public string Name => "Convert To Lowercase";
 
-        public string Name => "AddPrefix";
-
-        public AddPrefix()
-        {
-            Prefix = "";
-        }
-
-        public IRule? Parse(string data)
+        public IRule Parse(string data)
         {
             var tokens = data.Split(new string[] { " " },
                 StringSplitOptions.None);
@@ -23,8 +17,7 @@ namespace AddPrefixRule
             var pairs = parsedData.Split(new string[] { "=" },
                 StringSplitOptions.None);
 
-            var rule = new AddPrefixRule();
-            rule.Prefix = pairs[1];
+            var rule = new ConvertToLowercase();
             return rule;
         }
 
@@ -35,10 +28,14 @@ namespace AddPrefixRule
 
         public string Rename(string origin)
         {
+            string filename = Path.GetFileNameWithoutExtension(origin);
+            string extension = Path.GetExtension(origin);
+            filename = filename.ToLower();
+            
             var builder = new StringBuilder();
-            builder.Append(Prefix);
-            builder.Append(" ");
-            builder.Append(origin);
+
+            builder.Append(filename);
+            builder.Append(extension);
 
             string result = builder.ToString();
             return result;

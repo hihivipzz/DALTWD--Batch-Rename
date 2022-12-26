@@ -14,6 +14,21 @@
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -57,10 +72,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddCounterRule.cs" />
+    <Compile Include="AddPrefix.cs" />
+    <Compile Include="AddSuffix.cs" />
+    <Compile Include="ChangeExtension.cs" />
+    <Compile Include="ConvertPascalCase.cs" />
+    <Compile Include="ConvertToLowercase.cs" />
+    <Compile Include="DeleteSpaceBeginEnd.cs" />
     <Compile Include="HelpWindown.xaml.cs">
       <DependentUpon>HelpWindown.xaml</DependentUpon>
     </Compile>
+    <Compile Include="IRule.cs" />
+    <Compile Include="MyRegex.cs" />
     <Compile Include="PreviewRenameConverter.cs" />
+    <Compile Include="ReplaceCharacter.cs" />
+    <Compile Include="RemoveSpecialChars.cs" />
     <Compile Include="RuleFactory.cs" />
     <Page Include="HelpWindown.xaml">
       <SubType>Designer</SubType>
@@ -135,6 +161,18 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

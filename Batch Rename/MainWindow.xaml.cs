@@ -17,6 +17,10 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Forms;
 using Batch_Rename.Properties;
+using Contract;
+using System.Reflection;
+using System.Data;
+using System.Xml.Linq;
 
 namespace Batch_Rename
 {
@@ -36,36 +40,106 @@ namespace Batch_Rename
         ObservableCollection<object> _sourceFolders =
             new ObservableCollection<object>();
 
-        ObservableCollection<object> _ruleList =
-             new ObservableCollection<object>();
+        ObservableCollection<IRule> _ruleList =
+            new ObservableCollection<IRule>();
 
-        ObservableCollection<object> _activeRule =
-            new ObservableCollection<object>();
+        ObservableCollection<IRule> _activeRule =
+            new ObservableCollection<IRule>();
+
+        PreviewRenameConverter converter;
+
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            string exePath = Assembly.GetExecutingAssembly().Location;
+            string folder = System.IO.Path.GetDirectoryName(exePath);
+            FileInfo[] fis = new DirectoryInfo(folder).GetFiles("*.dll");
 
-            _ruleList.Add(new
+            foreach(FileInfo fileInfo in fis)
             {
-                Name = "suffix",
-            });
-            _ruleList.Add(new
-            {
-                Name = "prefix",
-            });
+                var domain = AppDomain.CurrentDomain;
+                Assembly assembly = domain.Load(AssemblyName.GetAssemblyName(fileInfo.FullName));
+
+                Type[] types = assembly.GetTypes();
+
+                foreach(var type in types)
+                {
+                    if(type.IsClass && typeof(IRule).IsAssignableFrom(type))
+                    {
+                        IRule rule = (IRule)Activator.CreateInstance(type);
+                        RuleFactory.Register(rule);
+                        _ruleList.Add(rule);
+                    }
+                }
+            }
+           
             addRuleCombobox.ItemsSource = _ruleList;
-
+           
             this.Width = (double)(Settings.Default["ScreenW"]);
             this.Height = (double)(Settings.Default["ScreenH"]);
             this.Top = (double)(Settings.Default["ScreenT"]);
             this.Left = (double)(Settings.Default["ScreenL"]);
             //Last preset
 
+            converter = (PreviewRenameConverter)FindResource("previewRenameConverter");
+            converter.Rules = new List<IRule>(_activeRule);
+
 
         }
 
         private void BatchButton_Click(object sender, RoutedEventArgs e)
         {
-            //
+            //check
+            if(ActiveRulesListBox.Items.Count == 0)
+            {
+                System.Windows.Forms.MessageBox.Show("Add Method Before Batching!", "Error Detected in Input", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                return ;
+            }
+            else if (sourceListView.Items.Count == 0 && sourceFolderListView.Items.Count == 0)
+            {
+                System.Windows.Forms.MessageBox.Show("Choose File Or Folder Before Batching!", "Error Detected in Input", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                return;
+            }
+
+            string targetPath = "";
+            List<IRule> rulesForFile = new List<IRule>();
+            List<IRule> rulesForFolder = new List<IRule>();
+            foreach (IRule rule in _activeRule)
+            {
+                rulesForFile.Add((IRule)rule.Clone());
+                rulesForFolder.Add((IRule)rule.Clone());
+            }
+
+            //Newname file
+            foreach (FileName file in _sourceFiles)
+            {
+                file.NewName = file.ShortName;
+                foreach (var rule in rulesForFile)
+                {
+                    file.NewName = rule.Rename(file.NewName);
+                }
+            }
+            //newname folder
+            foreach (FolderName file in _sourceFolders)
+            {
+                file.NewName = file.ShortName;
+                foreach (var rule in rulesForFolder)
+                {
+                    file.NewName = rule.Rename(file.NewName);
+                }
+            }
+
+            //change
+            foreach (FileName file in _sourceFiles)
+            {
+                File.Move(file.FullPath + "/" + file.ShortName, file.FullPath + "/" + file.NewName);
+            }
+            foreach (FolderName file in _sourceFolders)
+            {
+                Directory.Move(file.FullPath + "/" + file.ShortName, file.FullPath + "/" + file.NewName);
+            }
+
+            System.Windows.Forms.MessageBox.Show("Batch success", "Process done");
+
         }
 
         private void RefreshButton_Click(object sender, RoutedEventArgs e)
@@ -95,14 +169,20 @@ namespace Batch_Rename
         {
             if(addRuleCombobox.SelectedIndex != -1)
             {
-                _activeRule.Add(addRuleCombobox.SelectedItem);
+                var item = (IRule)addRuleCombobox.SelectedItem;
+                string name = item.Name;
+
+                IRule rule = RuleFactory.Instance().createRule(name);
+                _activeRule.Add(rule);
+
+
                 ActiveRulesListBox.ItemsSource = _activeRule;
-
+               
                 addRuleCombobox.SelectedIndex = -1;
-            }
-           
 
-           
+                
+            }
+
         }
 
         private void load_Click(object sender, RoutedEventArgs e)
@@ -132,12 +212,25 @@ namespace Batch_Rename
                     var fullPath = fileName;
                     var info = new FileInfo(fullPath);
                     var shortName = info.Name;
+                    var path = info.DirectoryName;
 
-                    _sourceFiles.Add(new
+                    bool checkExist = false;
+                    foreach(FileName file in _sourceFiles)
                     {
-                        FullPath = fullPath,
-                        ShortName = shortName,
-                    });
+                        if(file.ShortName == shortName && file.FullPath == path)
+                        {
+                            checkExist = true;
+                        }
+                    }
+                    if (!checkExist)
+                    {
+                        _sourceFiles.Add(new FileName
+                        {
+                            FullPath = path,
+                            ShortName = shortName,
+                        });
+                    }
+                    
                 }
                 sourceListView.ItemsSource = _sourceFiles;             
             }
@@ -153,12 +246,26 @@ namespace Batch_Rename
                 var fullPath = screen.SelectedPath;
                 var info = new FileInfo(fullPath);
                 var shortName = info.Name;
+                var path = info.DirectoryName;
 
-                _sourceFolders.Add(new
+                bool checkExist = false;
+                foreach (FolderName file in _sourceFolders)
                 {
-                    FullPath = fullPath,
-                    ShortName = shortName,
-                });   
+                    if (file.ShortName == shortName && file.FullPath == path)
+                    {
+                        checkExist = true;
+                    }
+                }
+                if (!checkExist)
+                {
+                    _sourceFolders.Add(new FolderName
+                    {
+                        FullPath = path,
+                        ShortName = shortName,
+                    });
+                }
+
+               
             }
             sourceFolderListView.ItemsSource = _sourceFolders;
         }
@@ -181,12 +288,24 @@ namespace Batch_Rename
                         var fullPath = file;
                         var info = new FileInfo(fullPath);
                         var shortName = info.Name;
+                        var path = info.DirectoryName;
 
-                        _sourceFiles.Add(new
+                        bool checkExist = false;
+                        foreach (FileName _file in _sourceFiles)
                         {
-                            FullPath = fullPath,
-                            ShortName = shortName,
-                        });
+                            if (_file.ShortName == shortName && _file.FullPath == path)
+                            {
+                                checkExist = true;
+                            }
+                        }
+                        if (!checkExist)
+                        {
+                            _sourceFiles.Add(new FileName
+                            {
+                                FullPath = path,
+                                ShortName = shortName,
+                            });
+                        }
                     }
                 }
                
@@ -382,7 +501,7 @@ namespace Batch_Rename
             }
         }
 
-        private void DeleteThisRuleButton_Click(object sender, RoutedEventArgs e)
+        public void DeleteThisRuleButton_Click(object sender, RoutedEventArgs e)
         {
             int index = ActiveRulesListBox.SelectedIndex;
             if (index != -1)
@@ -400,6 +519,42 @@ namespace Batch_Rename
             Settings.Default["ScreenT"] = this.Top;
             Settings.Default.Save();
             this.Close();
+        }
+
+        private void PreviewFile_Click(object sender, RoutedEventArgs e)
+        {
+            List<IRule> rules= new List<IRule>();
+            foreach (IRule rule in _activeRule)
+            {
+                rules.Add((IRule)rule.Clone());
+            }
+
+            foreach (FileName file in _sourceFiles)
+            {
+                file.NewName = file.ShortName;
+                foreach (var rule in rules)
+                {
+                    file.NewName = rule.Rename(file.NewName);
+                }
+            }
+        }
+
+        private void PreviewFolder_Click(object sender, RoutedEventArgs e)
+        {
+            List<IRule> rules = new List<IRule>();
+            foreach (IRule rule in _activeRule)
+            {
+                rules.Add((IRule)rule.Clone());
+            }
+
+            foreach (FolderName file in _sourceFolders)
+            {
+                file.NewName = file.ShortName;
+                foreach (var rule in rules)
+                {
+                    file.NewName = rule.Rename(file.NewName);
+                }
+            }
         }
     }
 }

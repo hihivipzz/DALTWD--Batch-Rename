@@ -1,0 +1,9 @@
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\DeleteSpaceBeginEndRule\obj\Debug\DeleteSpaceBeginEndRule.csproj.AssemblyReference.cache
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\DeleteSpaceBeginEndRule\obj\Debug\DeleteSpaceBeginEndRule.csproj.CoreCompileInputs.cache
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\DeleteSpaceBeginEndRule\bin\Debug\DeleteSpaceBeginEndRule.dll
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\DeleteSpaceBeginEndRule\bin\Debug\DeleteSpaceBeginEndRule.pdb
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\DeleteSpaceBeginEndRule\bin\Debug\Contract.dll
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\DeleteSpaceBeginEndRule\bin\Debug\Contract.pdb
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\DeleteSpaceBeginEndRule\obj\Debug\DeleteSpaceBeginEndRule.csproj.CopyComplete
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\DeleteSpaceBeginEndRule\obj\Debug\DeleteSpaceBeginEndRule.dll
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\DeleteSpaceBeginEndRule\obj\Debug\DeleteSpaceBeginEndRule.pdb

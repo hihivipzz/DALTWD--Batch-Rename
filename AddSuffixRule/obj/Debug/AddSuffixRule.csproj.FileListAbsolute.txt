@@ -1,0 +1,9 @@
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\AddSuffixRule\obj\Debug\AddSuffixRule.csproj.AssemblyReference.cache
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\AddSuffixRule\obj\Debug\AddSuffixRule.csproj.CoreCompileInputs.cache
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\AddSuffixRule\bin\Debug\AddSuffixRule.dll
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\AddSuffixRule\bin\Debug\AddSuffixRule.pdb
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\AddSuffixRule\bin\Debug\Contract.dll
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\AddSuffixRule\bin\Debug\Contract.pdb
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\AddSuffixRule\obj\Debug\AddSuffixRule.csproj.CopyComplete
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\AddSuffixRule\obj\Debug\AddSuffixRule.dll
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\AddSuffixRule\obj\Debug\AddSuffixRule.pdb

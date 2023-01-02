@@ -1,0 +1,9 @@
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\RemoveSpecialCharsRule\obj\Debug\RemoveSpecialCharsRule.csproj.AssemblyReference.cache
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\RemoveSpecialCharsRule\obj\Debug\RemoveSpecialCharsRule.csproj.CoreCompileInputs.cache
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\RemoveSpecialCharsRule\bin\Debug\RemoveSpecialCharsRule.dll
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\RemoveSpecialCharsRule\bin\Debug\RemoveSpecialCharsRule.pdb
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\RemoveSpecialCharsRule\bin\Debug\Contract.dll
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\RemoveSpecialCharsRule\bin\Debug\Contract.pdb
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\RemoveSpecialCharsRule\obj\Debug\RemoveSpecialCharsRule.csproj.CopyComplete
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\RemoveSpecialCharsRule\obj\Debug\RemoveSpecialCharsRule.dll
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\RemoveSpecialCharsRule\obj\Debug\RemoveSpecialCharsRule.pdb

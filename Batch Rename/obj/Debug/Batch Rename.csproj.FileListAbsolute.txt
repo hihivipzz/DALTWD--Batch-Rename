@@ -17,3 +17,11 @@ D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\obj\Debug\
 D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\obj\Debug\GeneratedInternalTypeHelper.g.cs
 D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\obj\Debug\HelpWindown.g.cs
 D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\obj\Debug\HelpWindown.baml
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\bin\Debug\Contract.dll
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\bin\Debug\Contract.pdb
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\obj\Debug\Batch Rename.csproj.CopyComplete
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\obj\Debug\ResourceDictionary.baml
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\obj\Debug\App.baml
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\obj\Debug\Batch Rename.GeneratedMSBuildEditorConfig.editorconfig
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\obj\Debug\Batch Rename.csproj.Fody.CopyLocal.cache
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\obj\Debug\Batch Rename.csproj.Fody.RuntimeCopyLocal.cache

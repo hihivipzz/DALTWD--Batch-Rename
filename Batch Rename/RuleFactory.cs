@@ -1,37 +1,48 @@
-﻿//using Contract;
-//using System;
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Text;
-//using System.Threading.Tasks;
+﻿using Contract;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-//namespace Batch_Rename
-//{
-//    public class RuleFactory
-//    {
-//        static Dictionary<string, IRule> _protypes = new Dictionary<string, IRule>();
+namespace Batch_Rename
+{
+    public class RuleFactory
+    {
+        static Dictionary<string, IRule> _prototypes = new Dictionary<string, IRule>();
 
-//        public static void Register(IRule prototype)
-//        {
-//            _protypes.Add(prototype.Name, prototype);
-//        }
+        public static void Register(IRule prototype)
+        {
+            _prototypes.Add(prototype.Name, prototype);
+        }
 
-//        private static RuleFactory? _instance = null;
-//        public static RuleFactory Instance()
-//        {
-//            if (_instance == null)
-//            {
-//                _instance = new RuleFactory();
-//            }
+        private static RuleFactory _instance = null;
+        public static RuleFactory Instance()
+        {
+            if (_instance == null)
+            {
+                _instance = new RuleFactory();
+            }
 
-//            return _instance;
-//        }
+            return _instance;
+        }
 
-//        private RuleFactory()
-//        {
+        private RuleFactory()
+        {
 
-//        }
+        }
+
+        public IRule createRule(string name)
+        {
+            IRule result= null;
+            if (_prototypes.ContainsKey(name))
+            {
+                result = (IRule)(_prototypes[name] as ICloneable).Clone();
+            }
+
+            return result;
+        }
 
 
-//    }
-//}
+    }
+}

@@ -1,0 +1,9 @@
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\ReplaceCharacterRule\bin\Debug\ReplaceCharacterRule.dll
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\ReplaceCharacterRule\bin\Debug\ReplaceCharacterRule.pdb
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\ReplaceCharacterRule\bin\Debug\Contract.dll
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\ReplaceCharacterRule\bin\Debug\Contract.pdb
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\ReplaceCharacterRule\obj\Debug\ReplaceCharacterRule.csproj.AssemblyReference.cache
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\ReplaceCharacterRule\obj\Debug\ReplaceCharacterRule.csproj.CoreCompileInputs.cache
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\ReplaceCharacterRule\obj\Debug\ReplaceCharacterRule.csproj.CopyComplete
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\ReplaceCharacterRule\obj\Debug\ReplaceCharacterRule.dll
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\ReplaceCharacterRule\obj\Debug\ReplaceCharacterRule.pdb

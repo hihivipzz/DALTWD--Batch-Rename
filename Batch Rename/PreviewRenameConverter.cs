@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Contract;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -10,12 +12,24 @@ namespace Batch_Rename
 {
     public class PreviewRenameConverter : IValueConverter
     {
+        public List<IRule> Rules { get; set; }
+
+        public PreviewRenameConverter()
+        {
+            Rules = new List<IRule>();
+        }
+
+
         public object Convert (object value, Type targetType, object parameter, CultureInfo culture)
         {
             string origin = (string)value;
 
-            string newName = origin + '1';
+            string newName = origin ;
 
+            foreach (var rule in Rules)
+            {
+                newName = rule.Rename(newName);
+            }
             return newName;
         }
 

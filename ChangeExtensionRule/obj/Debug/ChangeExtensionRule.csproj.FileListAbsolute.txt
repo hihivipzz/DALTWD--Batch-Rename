@@ -1,0 +1,9 @@
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\ChangeExtensionRule\obj\Debug\ChangeExtensionRule.csproj.AssemblyReference.cache
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\ChangeExtensionRule\obj\Debug\ChangeExtensionRule.csproj.CoreCompileInputs.cache
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\ChangeExtensionRule\bin\Debug\ChangeExtensionRule.dll
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\ChangeExtensionRule\bin\Debug\ChangeExtensionRule.pdb
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\ChangeExtensionRule\bin\Debug\Contract.dll
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\ChangeExtensionRule\bin\Debug\Contract.pdb
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\ChangeExtensionRule\obj\Debug\ChangeExtensionRule.csproj.CopyComplete
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\ChangeExtensionRule\obj\Debug\ChangeExtensionRule.dll
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\ChangeExtensionRule\obj\Debug\ChangeExtensionRule.pdb

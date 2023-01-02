@@ -1,0 +1,2 @@
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\ConvertToLowercaseRule\obj\Debug\ConvertToLowercaseRule.csproj.AssemblyReference.cache
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\ConvertToLowercaseRule\obj\Debug\ConvertToLowercaseRule.csproj.CoreCompileInputs.cache

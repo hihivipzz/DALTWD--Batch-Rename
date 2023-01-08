@@ -12,7 +12,8 @@ namespace Contract
     {
         string Rename(string origin);
 
-        IRule Parse(string data);
+        Dictionary<string, object> CreateRecord();
+        IRule Parse(Dictionary<string,object> data);
 
         string Name { get; }
 

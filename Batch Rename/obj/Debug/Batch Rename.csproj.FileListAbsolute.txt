@@ -25,3 +25,70 @@ D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\obj\Debug\
 D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\obj\Debug\Batch Rename.GeneratedMSBuildEditorConfig.editorconfig
 D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\obj\Debug\Batch Rename.csproj.Fody.CopyLocal.cache
 D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\obj\Debug\Batch Rename.csproj.Fody.RuntimeCopyLocal.cache
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\Batch Rename.exe.config
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\Batch Rename.exe
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\Batch Rename.pdb
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\Contract.dll
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\Contract.pdb
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\obj\Debug\Batch Rename.csproj.AssemblyReference.cache
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\obj\Debug\ResourceDictionary.baml
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\obj\Debug\HelpWindown.g.cs
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\obj\Debug\MainWindow.g.cs
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\obj\Debug\App.g.cs
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\obj\Debug\Batch Rename_MarkupCompile.cache
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\obj\Debug\Batch Rename_MarkupCompile.lref
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\obj\Debug\App.baml
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\obj\Debug\HelpWindown.baml
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\obj\Debug\MainWindow.baml
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\obj\Debug\Batch Rename.g.resources
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\obj\Debug\Batch_Rename.Properties.Resources.resources
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\obj\Debug\Batch Rename.csproj.GenerateResource.cache
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\obj\Debug\Batch Rename.GeneratedMSBuildEditorConfig.editorconfig
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\obj\Debug\Batch Rename.csproj.CoreCompileInputs.cache
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\obj\Debug\Batch Rename.csproj.Fody.CopyLocal.cache
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\obj\Debug\Batch Rename.csproj.Fody.RuntimeCopyLocal.cache
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\obj\Debug\Batch Rename.csproj.CopyComplete
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\obj\Debug\Batch Rename.exe
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\obj\Debug\Batch Rename.pdb
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\AddCounterRule.dll
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\AddPrefixRule.dll
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\AddSuffixRule.dll
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\ChangeExtensionRule.dll
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\ConvertPascalCaseRule.dll
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\ConvertToLowercaseRule.dll
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\DeleteSpaceBeginEndRule.dll
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\RemoveSpecialCharsRule.dll
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\ReplaceCharacterRule.dll
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\AddCounterRule.pdb
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\AddPrefixRule.pdb
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\AddSuffixRule.pdb
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\ChangeExtensionRule.pdb
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\ConvertPascalCaseRule.pdb
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\ConvertToLowercaseRule.pdb
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\DeleteSpaceBeginEndRule.pdb
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\RemoveSpecialCharsRule.pdb
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\ReplaceCharacterRule.pdb
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\JsonHandleUtlis.dll
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\System.Text.Json.dll
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\System.Memory.dll
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\System.ValueTuple.dll
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\System.Text.Encodings.Web.dll
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\System.Numerics.Vectors.dll
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\System.Buffers.dll
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\JsonHandleUtlis.pdb
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\JsonHandleUtlis.dll.config
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\System.Text.Json.xml
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\System.Memory.xml
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\System.ValueTuple.xml
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\System.Text.Encodings.Web.xml
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\System.Numerics.Vectors.xml
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\System.Buffers.xml
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\Newtonsoft.Json.dll
+D:\C-Sharp\DALTWD--Batch-Rename\Batch Rename\bin\Debug\Newtonsoft.Json.xml

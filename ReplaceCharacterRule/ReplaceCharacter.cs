@@ -17,7 +17,7 @@ namespace ReplaceCharacterRule
     {
         public string OldCharacter { get; set; }
         public string NewCharacter { get; set; }
-        public string Name => "Replace Character";
+        public string Name => "ReplaceCharacter";
         public bool IsChecked { get; set; }
 
         public ReplaceCharacter()
@@ -27,20 +27,36 @@ namespace ReplaceCharacterRule
             IsChecked= true;
         }
 
-        public IRule Parse(string data)
+        public ReplaceCharacter(string OldCharacter,string NewCharacter,bool IsChecked)
         {
-            var tokens = data.Split(new string[] { " " },
-                StringSplitOptions.None);
-            var parsedData = tokens[1];
+            this.OldCharacter = OldCharacter;
+            this.NewCharacter = NewCharacter;
+            this.IsChecked = IsChecked;
+        }
 
-            var pairs = parsedData.Split(new string[] { "=" },
-                StringSplitOptions.None);
+        public Dictionary<string, object> CreateRecord()
+        {
+            Dictionary<string, object> result = new Dictionary<string, object>();
 
-            var rule = new ReplaceCharacter
-            {
-                OldCharacter = pairs[1],
-                NewCharacter = pairs[2],
-            };
+            result.Add("Name", Name);
+            result.Add("OldCharacter", OldCharacter);
+            result.Add("NewCharacter", NewCharacter);
+            result.Add("IsChecked", IsChecked);
+
+            return result;
+        }
+
+        public IRule Parse(Dictionary<string,object> data)
+        {
+            string oldCharacter = (string)data["OldCharacter"];
+            string newCharacter = (string)data["NewCharacter"];
+            bool isChecked = (bool)data["IsChecked"];
+
+            var rule = new ReplaceCharacter {
+                OldCharacter = oldCharacter,
+                NewCharacter= newCharacter,
+                IsChecked = isChecked
+               };
             return rule;
         }
 

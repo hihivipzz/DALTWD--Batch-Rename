@@ -1,26 +1,16 @@
-﻿using Microsoft.Win32;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Windows.Forms;
 using Batch_Rename.Properties;
 using Contract;
 using System.Reflection;
-using System.Data;
-using System.Xml.Linq;
+using JsonHandleUtlis;
+
 
 namespace Batch_Rename
 {
@@ -29,6 +19,8 @@ namespace Batch_Rename
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        const string FileSaveName = "SavedRule.json";
         public MainWindow()
         {
             InitializeComponent();
@@ -47,6 +39,7 @@ namespace Batch_Rename
             new ObservableCollection<IRule>();
 
         PreviewRenameConverter converter;
+
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
@@ -71,7 +64,22 @@ namespace Batch_Rename
                     }
                 }
             }
-           
+
+           if (File.Exists(FileSaveName))
+            {
+                List<Dictionary<string, object>> savedRule = (List<Dictionary<string, object>>)JsonUtils.LoadJson(FileSaveName);
+                foreach (var dictionary in savedRule)
+                {
+                    object rule = RuleFactory.Parse(dictionary);
+                    if (rule != null)
+                    {
+                        _activeRule.Add((IRule)rule);
+                    }
+                }
+                ActiveRulesListBox.ItemsSource = _activeRule;
+            }
+
+
             addRuleCombobox.ItemsSource = _ruleList;
            
             this.Width = (double)(Settings.Default["ScreenW"]);
@@ -90,7 +98,7 @@ namespace Batch_Rename
         {
             //check
             if(ActiveRulesListBox.Items.Count == 0)
-            {
+            { 
                 System.Windows.Forms.MessageBox.Show("Add Method Before Batching!", "Error Detected in Input", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
                 return ;
             }
@@ -100,7 +108,6 @@ namespace Batch_Rename
                 return;
             }
 
-            string targetPath = "";
             List<IRule> rulesForFile = new List<IRule>();
             List<IRule> rulesForFolder = new List<IRule>();
             foreach (IRule rule in _activeRule)
@@ -132,19 +139,23 @@ namespace Batch_Rename
             foreach (FileName file in _sourceFiles)
             {
                 File.Move(file.FullPath + "/" + file.ShortName, file.FullPath + "/" + file.NewName);
+                file.ShortName = file.NewName;
             }
             foreach (FolderName file in _sourceFolders)
             {
                 Directory.Move(file.FullPath + "/" + file.ShortName, file.FullPath + "/" + file.NewName);
+                file.ShortName = file.NewName;
             }
 
             System.Windows.Forms.MessageBox.Show("Batch success", "Process done");
+
+
 
         }
 
         private void RefreshButton_Click(object sender, RoutedEventArgs e)
         {
-            sourceListView.Items.Refresh();
+            sourceListView.Items.Refresh(); 
             sourceFolderListView.Items.Refresh();
         }
 
@@ -197,8 +208,16 @@ namespace Batch_Rename
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
+            List<Dictionary<string,object>> saveRule = new List<Dictionary<string, object>>();
+
+            foreach(IRule rule in _activeRule)
+            {
+                saveRule.Add(rule.CreateRecord());
+            }
+            JsonUtils.WriteJson(saveRule, FileSaveName);
 
         }
+
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
@@ -227,7 +246,7 @@ namespace Batch_Rename
                         _sourceFiles.Add(new FileName
                         {
                             FullPath = path,
-                            ShortName = shortName,
+                            ShortName = shortName,  
                         });
                     }
                     
@@ -239,7 +258,6 @@ namespace Batch_Rename
         private void AddFolderButton_Click(object sender, RoutedEventArgs e)
         {
             var screen = new FolderBrowserDialog();
-
 
             if (screen.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {

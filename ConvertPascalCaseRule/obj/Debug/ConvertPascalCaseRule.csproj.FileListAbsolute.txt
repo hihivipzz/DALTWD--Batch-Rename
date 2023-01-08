@@ -7,3 +7,12 @@ D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\ConvertPascalCaseRule\b
 D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\ConvertPascalCaseRule\obj\Debug\ConvertPascalCaseRule.csproj.CopyComplete
 D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\ConvertPascalCaseRule\obj\Debug\ConvertPascalCaseRule.dll
 D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\ConvertPascalCaseRule\obj\Debug\ConvertPascalCaseRule.pdb
+D:\C-Sharp\DALTWD--Batch-Rename\ConvertPascalCaseRule\bin\Debug\ConvertPascalCaseRule.dll
+D:\C-Sharp\DALTWD--Batch-Rename\ConvertPascalCaseRule\bin\Debug\ConvertPascalCaseRule.pdb
+D:\C-Sharp\DALTWD--Batch-Rename\ConvertPascalCaseRule\bin\Debug\Contract.dll
+D:\C-Sharp\DALTWD--Batch-Rename\ConvertPascalCaseRule\bin\Debug\Contract.pdb
+D:\C-Sharp\DALTWD--Batch-Rename\ConvertPascalCaseRule\obj\Debug\ConvertPascalCaseRule.csproj.AssemblyReference.cache
+D:\C-Sharp\DALTWD--Batch-Rename\ConvertPascalCaseRule\obj\Debug\ConvertPascalCaseRule.csproj.CoreCompileInputs.cache
+D:\C-Sharp\DALTWD--Batch-Rename\ConvertPascalCaseRule\obj\Debug\ConvertPascalCaseRule.csproj.CopyComplete
+D:\C-Sharp\DALTWD--Batch-Rename\ConvertPascalCaseRule\obj\Debug\ConvertPascalCaseRule.dll
+D:\C-Sharp\DALTWD--Batch-Rename\ConvertPascalCaseRule\obj\Debug\ConvertPascalCaseRule.pdb

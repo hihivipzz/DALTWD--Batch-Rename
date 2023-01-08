@@ -28,18 +28,25 @@ namespace AddSuffixRule
             return MemberwiseClone();
         }
 
-        public IRule Parse(string data)
+        public Dictionary<string, object> CreateRecord()
         {
-            var tokens = data.Split(new string[] { " " },
-              StringSplitOptions.None);
-            var parsedData = tokens[1];
+            Dictionary<string, object> result = new Dictionary<string, object>();
 
-            var pairs = parsedData.Split(new string[] { "=" },
-                StringSplitOptions.None);
+            result.Add("Name", Name);
+            result.Add("Suffix", Suffix);
+            result.Add("IsChecked", IsChecked);
 
+            return result;
+        }
+
+        public IRule Parse(Dictionary<string,object> data)
+        {
+            string suffix = (string)data["Suffix"];
+            bool isCheck = (bool)data["IsChecked"];
             var rule = new AddSuffix
             {
-                Suffix = pairs[1]
+                Suffix = suffix,
+                IsChecked = isCheck
             };
 
             return rule;

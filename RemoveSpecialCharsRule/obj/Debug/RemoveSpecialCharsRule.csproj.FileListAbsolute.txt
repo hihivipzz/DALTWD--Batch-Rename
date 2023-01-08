@@ -7,3 +7,12 @@ D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\RemoveSpecialCharsRule\
 D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\RemoveSpecialCharsRule\obj\Debug\RemoveSpecialCharsRule.csproj.CopyComplete
 D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\RemoveSpecialCharsRule\obj\Debug\RemoveSpecialCharsRule.dll
 D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\RemoveSpecialCharsRule\obj\Debug\RemoveSpecialCharsRule.pdb
+D:\C-Sharp\DALTWD--Batch-Rename\RemoveSpecialCharsRule\bin\Debug\RemoveSpecialCharsRule.dll
+D:\C-Sharp\DALTWD--Batch-Rename\RemoveSpecialCharsRule\bin\Debug\RemoveSpecialCharsRule.pdb
+D:\C-Sharp\DALTWD--Batch-Rename\RemoveSpecialCharsRule\bin\Debug\Contract.dll
+D:\C-Sharp\DALTWD--Batch-Rename\RemoveSpecialCharsRule\bin\Debug\Contract.pdb
+D:\C-Sharp\DALTWD--Batch-Rename\RemoveSpecialCharsRule\obj\Debug\RemoveSpecialCharsRule.csproj.AssemblyReference.cache
+D:\C-Sharp\DALTWD--Batch-Rename\RemoveSpecialCharsRule\obj\Debug\RemoveSpecialCharsRule.csproj.CoreCompileInputs.cache
+D:\C-Sharp\DALTWD--Batch-Rename\RemoveSpecialCharsRule\obj\Debug\RemoveSpecialCharsRule.csproj.CopyComplete
+D:\C-Sharp\DALTWD--Batch-Rename\RemoveSpecialCharsRule\obj\Debug\RemoveSpecialCharsRule.dll
+D:\C-Sharp\DALTWD--Batch-Rename\RemoveSpecialCharsRule\obj\Debug\RemoveSpecialCharsRule.pdb

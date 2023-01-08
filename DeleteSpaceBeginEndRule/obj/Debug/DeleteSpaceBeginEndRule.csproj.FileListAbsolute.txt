@@ -7,3 +7,12 @@ D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\DeleteSpaceBeginEndRule
 D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\DeleteSpaceBeginEndRule\obj\Debug\DeleteSpaceBeginEndRule.csproj.CopyComplete
 D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\DeleteSpaceBeginEndRule\obj\Debug\DeleteSpaceBeginEndRule.dll
 D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\DeleteSpaceBeginEndRule\obj\Debug\DeleteSpaceBeginEndRule.pdb
+D:\C-Sharp\DALTWD--Batch-Rename\DeleteSpaceBeginEndRule\bin\Debug\DeleteSpaceBeginEndRule.dll
+D:\C-Sharp\DALTWD--Batch-Rename\DeleteSpaceBeginEndRule\bin\Debug\DeleteSpaceBeginEndRule.pdb
+D:\C-Sharp\DALTWD--Batch-Rename\DeleteSpaceBeginEndRule\bin\Debug\Contract.dll
+D:\C-Sharp\DALTWD--Batch-Rename\DeleteSpaceBeginEndRule\bin\Debug\Contract.pdb
+D:\C-Sharp\DALTWD--Batch-Rename\DeleteSpaceBeginEndRule\obj\Debug\DeleteSpaceBeginEndRule.csproj.AssemblyReference.cache
+D:\C-Sharp\DALTWD--Batch-Rename\DeleteSpaceBeginEndRule\obj\Debug\DeleteSpaceBeginEndRule.csproj.CoreCompileInputs.cache
+D:\C-Sharp\DALTWD--Batch-Rename\DeleteSpaceBeginEndRule\obj\Debug\DeleteSpaceBeginEndRule.csproj.CopyComplete
+D:\C-Sharp\DALTWD--Batch-Rename\DeleteSpaceBeginEndRule\obj\Debug\DeleteSpaceBeginEndRule.dll
+D:\C-Sharp\DALTWD--Batch-Rename\DeleteSpaceBeginEndRule\obj\Debug\DeleteSpaceBeginEndRule.pdb

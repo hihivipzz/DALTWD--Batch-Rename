@@ -7,3 +7,12 @@ D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\ConvertToLowercaseRule\
 D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\ConvertToLowercaseRule\obj\Debug\ConvertToLowercaseRule.csproj.CopyComplete
 D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\ConvertToLowercaseRule\obj\Debug\ConvertToLowercaseRule.dll
 D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\ConvertToLowercaseRule\obj\Debug\ConvertToLowercaseRule.pdb
+D:\C-Sharp\DALTWD--Batch-Rename\ConvertToLowercaseRule\bin\Debug\ConvertToLowercaseRule.dll
+D:\C-Sharp\DALTWD--Batch-Rename\ConvertToLowercaseRule\bin\Debug\ConvertToLowercaseRule.pdb
+D:\C-Sharp\DALTWD--Batch-Rename\ConvertToLowercaseRule\bin\Debug\Contract.dll
+D:\C-Sharp\DALTWD--Batch-Rename\ConvertToLowercaseRule\bin\Debug\Contract.pdb
+D:\C-Sharp\DALTWD--Batch-Rename\ConvertToLowercaseRule\obj\Debug\ConvertToLowercaseRule.csproj.AssemblyReference.cache
+D:\C-Sharp\DALTWD--Batch-Rename\ConvertToLowercaseRule\obj\Debug\ConvertToLowercaseRule.csproj.CoreCompileInputs.cache
+D:\C-Sharp\DALTWD--Batch-Rename\ConvertToLowercaseRule\obj\Debug\ConvertToLowercaseRule.csproj.CopyComplete
+D:\C-Sharp\DALTWD--Batch-Rename\ConvertToLowercaseRule\obj\Debug\ConvertToLowercaseRule.dll
+D:\C-Sharp\DALTWD--Batch-Rename\ConvertToLowercaseRule\obj\Debug\ConvertToLowercaseRule.pdb

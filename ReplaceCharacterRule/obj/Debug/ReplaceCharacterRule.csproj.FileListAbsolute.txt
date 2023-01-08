@@ -7,3 +7,12 @@ D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\ReplaceCharacterRule\ob
 D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\ReplaceCharacterRule\obj\Debug\ReplaceCharacterRule.csproj.CopyComplete
 D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\ReplaceCharacterRule\obj\Debug\ReplaceCharacterRule.dll
 D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\ReplaceCharacterRule\obj\Debug\ReplaceCharacterRule.pdb
+D:\C-Sharp\DALTWD--Batch-Rename\ReplaceCharacterRule\bin\Debug\ReplaceCharacterRule.dll
+D:\C-Sharp\DALTWD--Batch-Rename\ReplaceCharacterRule\bin\Debug\ReplaceCharacterRule.pdb
+D:\C-Sharp\DALTWD--Batch-Rename\ReplaceCharacterRule\bin\Debug\Contract.dll
+D:\C-Sharp\DALTWD--Batch-Rename\ReplaceCharacterRule\bin\Debug\Contract.pdb
+D:\C-Sharp\DALTWD--Batch-Rename\ReplaceCharacterRule\obj\Debug\ReplaceCharacterRule.csproj.AssemblyReference.cache
+D:\C-Sharp\DALTWD--Batch-Rename\ReplaceCharacterRule\obj\Debug\ReplaceCharacterRule.csproj.CoreCompileInputs.cache
+D:\C-Sharp\DALTWD--Batch-Rename\ReplaceCharacterRule\obj\Debug\ReplaceCharacterRule.csproj.CopyComplete
+D:\C-Sharp\DALTWD--Batch-Rename\ReplaceCharacterRule\obj\Debug\ReplaceCharacterRule.dll
+D:\C-Sharp\DALTWD--Batch-Rename\ReplaceCharacterRule\obj\Debug\ReplaceCharacterRule.pdb

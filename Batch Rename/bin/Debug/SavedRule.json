@@ -1,0 +1,20 @@
+[
+  {
+    "Name": "Add Suffix",
+    "Suffix": "sadf",
+    "IsChecked": true
+  },
+  {
+    "Name": "ConvertTo Pascal Case",
+    "IsChecked": true
+  },
+  {
+    "Name": "Convert To Lowercase",
+    "IsChecked": true
+  },
+  {
+    "Name": "Remove Special Chars",
+    "BlackList": "fasdfasdfasdf",
+    "IsChecked": true
+  }
+]

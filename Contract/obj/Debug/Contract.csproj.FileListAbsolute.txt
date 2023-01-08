@@ -4,3 +4,9 @@ D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Contract\obj\Debug\Cont
 D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Contract\obj\Debug\Contract.csproj.CoreCompileInputs.cache
 D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Contract\obj\Debug\Contract.dll
 D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Contract\obj\Debug\Contract.pdb
+D:\C-Sharp\DALTWD--Batch-Rename\Contract\bin\Debug\Contract.dll
+D:\C-Sharp\DALTWD--Batch-Rename\Contract\bin\Debug\Contract.pdb
+D:\C-Sharp\DALTWD--Batch-Rename\Contract\obj\Debug\Contract.csproj.AssemblyReference.cache
+D:\C-Sharp\DALTWD--Batch-Rename\Contract\obj\Debug\Contract.csproj.CoreCompileInputs.cache
+D:\C-Sharp\DALTWD--Batch-Rename\Contract\obj\Debug\Contract.dll
+D:\C-Sharp\DALTWD--Batch-Rename\Contract\obj\Debug\Contract.pdb

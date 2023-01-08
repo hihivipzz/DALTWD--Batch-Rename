@@ -7,3 +7,12 @@ D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\AddCounterRule\bin\Debu
 D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\AddCounterRule\obj\Debug\AddCounterRule.csproj.CopyComplete
 D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\AddCounterRule\obj\Debug\AddCounterRule.dll
 D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\AddCounterRule\obj\Debug\AddCounterRule.pdb
+D:\C-Sharp\DALTWD--Batch-Rename\AddCounterRule\bin\Debug\AddCounterRule.dll
+D:\C-Sharp\DALTWD--Batch-Rename\AddCounterRule\bin\Debug\AddCounterRule.pdb
+D:\C-Sharp\DALTWD--Batch-Rename\AddCounterRule\bin\Debug\Contract.dll
+D:\C-Sharp\DALTWD--Batch-Rename\AddCounterRule\bin\Debug\Contract.pdb
+D:\C-Sharp\DALTWD--Batch-Rename\AddCounterRule\obj\Debug\AddCounterRule.csproj.AssemblyReference.cache
+D:\C-Sharp\DALTWD--Batch-Rename\AddCounterRule\obj\Debug\AddCounterRule.csproj.CoreCompileInputs.cache
+D:\C-Sharp\DALTWD--Batch-Rename\AddCounterRule\obj\Debug\AddCounterRule.csproj.CopyComplete
+D:\C-Sharp\DALTWD--Batch-Rename\AddCounterRule\obj\Debug\AddCounterRule.dll
+D:\C-Sharp\DALTWD--Batch-Rename\AddCounterRule\obj\Debug\AddCounterRule.pdb

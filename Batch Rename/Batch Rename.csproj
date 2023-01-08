@@ -151,9 +151,49 @@
     <Resource Include="images\folder.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AddCounterRule\AddCounterRule.csproj">
+      <Project>{197306DB-BBF4-49F3-94CD-8D8F0DA63269}</Project>
+      <Name>AddCounterRule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AddPrefixRule\AddPrefixRule.csproj">
+      <Project>{D1CD9157-0ABC-4C5D-862B-BD3E53AB1502}</Project>
+      <Name>AddPrefixRule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AddSuffixRule\AddSuffixRule.csproj">
+      <Project>{611921a0-c418-4ff9-ab7e-7727fed27bb9}</Project>
+      <Name>AddSuffixRule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChangeExtensionRule\ChangeExtensionRule.csproj">
+      <Project>{910e059d-ad06-407b-928a-8adfbe7dbcd4}</Project>
+      <Name>ChangeExtensionRule</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Contract\Contract.csproj">
       <Project>{1742a6d4-7260-41ea-9e50-1bfc22b57bb3}</Project>
       <Name>Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConvertPascalCaseRule\ConvertPascalCaseRule.csproj">
+      <Project>{57657ad5-6fc0-4243-bb12-acb55985dfdc}</Project>
+      <Name>ConvertPascalCaseRule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConvertToLowercaseRule\ConvertToLowercaseRule.csproj">
+      <Project>{627df1b1-a6f5-44a9-a35d-c7f7948279a1}</Project>
+      <Name>ConvertToLowercaseRule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DeleteSpaceBeginEndRule\DeleteSpaceBeginEndRule.csproj">
+      <Project>{d86a44cb-0cce-43c9-a8e8-026154f2524e}</Project>
+      <Name>DeleteSpaceBeginEndRule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JsonHandleUtlis\JsonHandleUtlis.csproj">
+      <Project>{6ab23147-fffb-47ca-b670-03924ae3daea}</Project>
+      <Name>JsonHandleUtlis</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RemoveSpecialCharsRule\RemoveSpecialCharsRule.csproj">
+      <Project>{7bcd4bc6-72e3-4a0d-959b-bda4e16e2e52}</Project>
+      <Name>RemoveSpecialCharsRule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReplaceCharacterRule\ReplaceCharacterRule.csproj">
+      <Project>{8bed39c2-e1cc-432b-b432-08b43e2b2022}</Project>
+      <Name>ReplaceCharacterRule</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

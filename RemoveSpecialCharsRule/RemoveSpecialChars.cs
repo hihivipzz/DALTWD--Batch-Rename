@@ -12,7 +12,7 @@ namespace RemoveSpecialCharsRule
 {
     public class RemoveSpecialChars : IRule, ICloneable
     {
-        public String BlackList { get; set; }
+        public string BlackList { get; set; }
 
         public string Name => "Remove Special Chars";
 
@@ -24,10 +24,33 @@ namespace RemoveSpecialCharsRule
             IsChecked = true;
         }
 
-        public IRule Parse(string data)
+        public RemoveSpecialChars(string BlackList,bool IsChecked)
         {
-            RemoveSpecialChars result = new RemoveSpecialChars();
+            this.BlackList = BlackList;
+            this.IsChecked = IsChecked;
+        }
 
+        public Dictionary<string, object> CreateRecord()
+        {
+            Dictionary<string, object> result = new Dictionary<string, object>();
+
+            result.Add("Name", Name);
+            result.Add("BlackList", BlackList);
+            result.Add("IsChecked", IsChecked);
+
+            return result;
+        }
+
+        public IRule Parse(Dictionary<string,object> data)
+        {
+            string blackList = (string)data["BlackList"];
+            bool isChecked = (bool)data["IsChecked"];
+
+            RemoveSpecialChars result = new RemoveSpecialChars
+            {
+                BlackList = blackList,
+                IsChecked = isChecked
+            };
             return result;
         }
 

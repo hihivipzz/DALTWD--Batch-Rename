@@ -7,3 +7,12 @@ D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\AddPrefixRule\bin\Debug
 D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\AddPrefixRule\obj\Debug\AddPrefixRule.csproj.CopyComplete
 D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\AddPrefixRule\obj\Debug\AddPrefixRule.dll
 D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\AddPrefixRule\obj\Debug\AddPrefixRule.pdb
+D:\C-Sharp\DALTWD--Batch-Rename\AddPrefixRule\bin\Debug\AddPrefixRule.dll
+D:\C-Sharp\DALTWD--Batch-Rename\AddPrefixRule\bin\Debug\AddPrefixRule.pdb
+D:\C-Sharp\DALTWD--Batch-Rename\AddPrefixRule\bin\Debug\Contract.dll
+D:\C-Sharp\DALTWD--Batch-Rename\AddPrefixRule\bin\Debug\Contract.pdb
+D:\C-Sharp\DALTWD--Batch-Rename\AddPrefixRule\obj\Debug\AddPrefixRule.csproj.AssemblyReference.cache
+D:\C-Sharp\DALTWD--Batch-Rename\AddPrefixRule\obj\Debug\AddPrefixRule.csproj.CoreCompileInputs.cache
+D:\C-Sharp\DALTWD--Batch-Rename\AddPrefixRule\obj\Debug\AddPrefixRule.csproj.CopyComplete
+D:\C-Sharp\DALTWD--Batch-Rename\AddPrefixRule\obj\Debug\AddPrefixRule.dll
+D:\C-Sharp\DALTWD--Batch-Rename\AddPrefixRule\obj\Debug\AddPrefixRule.pdb

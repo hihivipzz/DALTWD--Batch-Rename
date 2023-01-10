@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace Batch_Rename
 {
@@ -43,6 +44,20 @@ namespace Batch_Rename
             return result;
         }
 
+        public static object Parse(Dictionary<string, object> data)
+        {
+
+            if (data.ContainsKey("Name"))
+            {
+                string token = (string)data["Name"];
+                if (_prototypes.ContainsKey(token))
+                {
+                    var rule = _prototypes[token].Parse(data);
+                    return rule;
+                }
+            }
+            return null;
+        }
 
     }
 }

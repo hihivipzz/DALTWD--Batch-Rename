@@ -490,8 +490,14 @@
                     <TextBlock Text=" |" FontSize="15"></TextBlock>
                     <StackPanel Orientation="Horizontal">
                         <Label Content="Presets: "/>
-                        <ComboBox Name="PresetCombobox" Width="100" Height="20" >
-
+                        <ComboBox Name="PresetCombobox" Width="100" Height="20" SelectionChanged="PresetCombobox_SelectionChanged">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal" >
+                                        <TextBlock Text="{Binding Name}"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
                         </ComboBox>
                     </StackPanel>
                 </ToolBar>

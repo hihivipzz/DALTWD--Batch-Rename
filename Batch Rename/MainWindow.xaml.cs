@@ -46,6 +46,9 @@ namespace Batch_Rename
         ObservableCollection<IRule> _activeRule =
             new ObservableCollection<IRule>();
 
+        ObservableCollection<object> _presetList =
+            new ObservableCollection<object>();
+
         PreviewRenameConverter converter;
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -78,16 +81,59 @@ namespace Batch_Rename
             this.Height = (double)(Settings.Default["ScreenH"]);
             this.Top = (double)(Settings.Default["ScreenT"]);
             this.Left = (double)(Settings.Default["ScreenL"]);
+            var presetfilename = (string)Settings.Default["LastPreset"];
             //Last preset
+            if (File.Exists(presetfilename))
+            {
+                var info = new FileInfo(presetfilename);
+                var shortName = System.IO.Path.GetFileNameWithoutExtension(info.Name);
+                var extension = System.IO.Path.GetExtension(info.Name);
+                if (extension != ".json")
+                {
+                    System.Windows.Forms.MessageBox.Show("file is not json file");
+                    return;
+                }
+                List<Dictionary<string, object>> savedRule = (List<Dictionary<string, object>>)JsonUtils.LoadJson(presetfilename);
+                _activeRule.Clear();
+                foreach (var dictionary in savedRule)
+                {
+                    object rule = RuleFactory.Parse(dictionary);
+                    if (rule != null)
+                    {
 
-            converter = (PreviewRenameConverter)FindResource("previewRenameConverter");
-            converter.Rules = new List<IRule>(_activeRule);
+                        _activeRule.Add((IRule)rule);
+                    }
+                }
+                ActiveRulesListBox.ItemsSource = _activeRule;
+                var preset = new Preset()
+                {
+                    Name = shortName,
+                    Path = presetfilename,
+                };
+                foreach (IRule rule in _activeRule)
+                {
+                    preset.Rules.Add((IRule)rule.Clone());
+
+                }
+                _presetList.Add(preset);
+                PresetCombobox.ItemsSource = _presetList;
+                PresetCombobox.SelectedItem = preset;
+                System.Windows.Forms.MessageBox.Show("Load last preset success");
+                converter = (PreviewRenameConverter)FindResource("previewRenameConverter");
+                converter.Rules = new List<IRule>(_activeRule);
+            }
+            else
+            {
+                System.Windows.Forms.MessageBox.Show("Load Last Preset fail");
+            }
 
 
         }
 
         private void BatchButton_Click(object sender, RoutedEventArgs e)
         {
+
+
             //check
             if(ActiveRulesListBox.Items.Count == 0)
             {
@@ -99,47 +145,71 @@ namespace Batch_Rename
                 System.Windows.Forms.MessageBox.Show("Choose File Or Folder Before Batching!", "Error Detected in Input", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
                 return;
             }
-
             string targetPath = "";
             List<IRule> rulesForFile = new List<IRule>();
             List<IRule> rulesForFolder = new List<IRule>();
-            foreach (IRule rule in _activeRule)
+            MessageBoxResult result = System.Windows.MessageBox.Show("Are you sure to rename file", "My App", MessageBoxButton.YesNo);
+            switch (result)
             {
-                rulesForFile.Add((IRule)rule.Clone());
-                rulesForFolder.Add((IRule)rule.Clone());
-            }
+                case MessageBoxResult.Yes:
+                    foreach (IRule rule in _activeRule)
+                    {
+                        rulesForFile.Add((IRule)rule.Clone());
+                        rulesForFolder.Add((IRule)rule.Clone());
+                    }
 
-            //Newname file
-            foreach (FileName file in _sourceFiles)
-            {
-                file.NewName = file.ShortName;
-                foreach (var rule in rulesForFile)
-                {
-                    file.NewName = rule.Rename(file.NewName);
-                }
-            }
-            //newname folder
-            foreach (FolderName file in _sourceFolders)
-            {
-                file.NewName = file.ShortName;
-                foreach (var rule in rulesForFolder)
-                {
-                    file.NewName = rule.Rename(file.NewName);
-                }
-            }
+                    //Newname file
+                    foreach (FileName file in _sourceFiles)
+                    {
+                        file.NewName = file.ShortName;
+                        foreach (var rule in rulesForFile)
+                        {
+                            if (rule.IsChecked)
+                            {
+                                file.NewName = rule.Rename(file.NewName);
+                            }
+                        }
+                        
+                    }
+                    //newname folder
+                    foreach (FolderName file in _sourceFolders)
+                    {
+                        file.NewName = file.ShortName;
+                        foreach (var rule in rulesForFolder)
+                        {
+                            if (rule.IsChecked)
+                            {
+                                file.NewName = rule.Rename(file.NewName);
+                            }
 
-            //change
-            foreach (FileName file in _sourceFiles)
-            {
-                File.Move(file.FullPath + "/" + file.ShortName, file.FullPath + "/" + file.NewName);
-            }
-            foreach (FolderName file in _sourceFolders)
-            {
-                Directory.Move(file.FullPath + "/" + file.ShortName, file.FullPath + "/" + file.NewName);
-            }
+                        }
+                        
+                    }
 
-            System.Windows.Forms.MessageBox.Show("Batch success", "Process done");
+                    //change
+                    foreach (FileName file in _sourceFiles)
+                    {
+                        File.Move(file.FullPath + "/" + file.ShortName, file.FullPath + "/" + file.NewName);
+                    }
+                    foreach (FolderName file in _sourceFolders)
+                    {
+                        Directory.Move(file.FullPath + "/" + file.ShortName, file.FullPath + "/" + file.NewName);
+                    }
 
+                    foreach (FileName file in _sourceFiles)
+                    {
+                        file.ShortName = file.NewName;
+                    };
+                    foreach (FileName file in _sourceFolders)
+                    {
+                        file.ShortName = file.NewName;
+                    }
+
+                    System.Windows.Forms.MessageBox.Show("Batch success", "Process done");
+                    break;
+                case MessageBoxResult.No:
+                    break;
+            }
         }
 
         private void RefreshButton_Click(object sender, RoutedEventArgs e)
@@ -150,19 +220,14 @@ namespace Batch_Rename
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
-            int index = ActiveRulesListBox.SelectedIndex;
-            if (index != -1)
-            {
-                _activeRule.RemoveAt(index);
-                ActiveRulesListBox.ItemsSource = _activeRule;
-            }
-            
+            _activeRule.Clear();
+            ActiveRulesListBox.ItemsSource = _activeRule;
         }
 
         private void ClearButton_Click(object sender, RoutedEventArgs e)
         {
-            _activeRule.Clear();
-            ActiveRulesListBox.ItemsSource = _activeRule;
+           _sourceFiles.Clear();
+            _sourceFolders.Clear();
         }
 
         private void addMethodCombobox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -185,19 +250,73 @@ namespace Batch_Rename
 
         }
 
-        private void load_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void LoadButton_Click(object sender, RoutedEventArgs e)
         {
-
+            askForSave();
+            var screen = new Microsoft.Win32.OpenFileDialog();
+            if (screen.ShowDialog() == true)
+            {
+                string presetfilename = screen.FileName;
+                var info = new FileInfo(presetfilename);
+                var shortName = System.IO.Path.GetFileNameWithoutExtension(info.Name);
+                var extension = System.IO.Path.GetExtension(info.Name); 
+                if(extension != ".json")
+                {
+                    System.Windows.Forms.MessageBox.Show("file is not json file");
+                    return;
+                }
+                List<Dictionary<string, object>> savedRule = (List<Dictionary<string, object>>)JsonUtils.LoadJson(presetfilename);
+                _activeRule.Clear();
+                foreach (var dictionary in savedRule)
+                {
+                    object rule = RuleFactory.Parse(dictionary);
+                    if (rule != null)
+                    {
+                        
+                        _activeRule.Add((IRule)rule);
+                    }
+                }
+                ActiveRulesListBox.ItemsSource = _activeRule;
+                var preset = new Preset()
+                {
+                    Name = shortName,
+                    Path = presetfilename,
+                };
+                foreach (IRule rule in _activeRule)
+                {
+                    preset.Rules.Add((IRule)rule.Clone());
+          
+                }
+                _presetList.Add(preset);
+                PresetCombobox.ItemsSource = _presetList;
+                PresetCombobox.SelectedItem= preset;
+                System.Windows.Forms.MessageBox.Show("Load preset success");
+            }            
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
+            if (ActiveRulesListBox.Items.Count == 0)
+            {
+                System.Windows.Forms.MessageBox.Show("Nothing To Save To Preset", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+            }
+            else
+            {
+                Microsoft.Win32.SaveFileDialog saveFileDialog = new Microsoft.Win32.SaveFileDialog();
+                saveFileDialog.Filter = "JSON (*.json)|*.json";
+                if (saveFileDialog.ShowDialog() == true)
+                {
+                    List<Dictionary<string, object>> saveRule = new List<Dictionary<string, object>>();
 
+                    foreach (IRule rule in _activeRule)
+                    {
+                        saveRule.Add(rule.CreateRecord());
+                    }
+
+                    JsonUtils.WriteJson(saveRule, saveFileDialog.FileNames[0]);
+                }
+            }
+            System.Windows.Forms.MessageBox.Show("Save preset success");
         }
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
@@ -513,10 +632,16 @@ namespace Batch_Rename
 
         private void Window_Closed(object sender, EventArgs e)
         {
+            askForSave();
             Settings.Default["ScreenW"] = this.Width;
             Settings.Default["ScreenH"] = this.Height;
             Settings.Default["ScreenL"] = this.Left;
             Settings.Default["ScreenT"] = this.Top;
+            if(PresetCombobox.SelectedIndex!= -1)
+            {
+               var preset = (Preset)PresetCombobox.SelectedItem;
+                Settings.Default["LastPreset"] = preset.Path;
+            }
             Settings.Default.Save();
             this.Close();
         }
@@ -534,7 +659,11 @@ namespace Batch_Rename
                 file.NewName = file.ShortName;
                 foreach (var rule in rules)
                 {
-                    file.NewName = rule.Rename(file.NewName);
+                    if (rule.IsChecked)
+                    {
+                        file.NewName = rule.Rename(file.NewName);
+                    }
+                    
                 }
             }
         }
@@ -552,9 +681,58 @@ namespace Batch_Rename
                 file.NewName = file.ShortName;
                 foreach (var rule in rules)
                 {
-                    file.NewName = rule.Rename(file.NewName);
+                    if (rule.IsChecked)
+                    {
+                        file.NewName = rule.Rename(file.NewName);
+                    }
+                    
                 }
             }
+        }
+
+        private void PresetCombobox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (PresetCombobox.SelectedIndex != -1)
+            {
+                Preset preset = (Preset)PresetCombobox.SelectedItem;
+                _activeRule.Clear();
+                foreach (IRule rule in preset.Rules)
+                {
+                    _activeRule.Add((IRule)rule.Clone());
+
+                }
+            }
+        }
+
+        private void askForSave()
+        {
+            if (ActiveRulesListBox.Items.Count != 0)
+            {
+                MessageBoxResult result = System.Windows.MessageBox.Show("Would you like save current preset?", "My App", MessageBoxButton.YesNo);
+                switch (result)
+                {
+                    case MessageBoxResult.Yes:
+                        Microsoft.Win32.SaveFileDialog saveFileDialog = new Microsoft.Win32.SaveFileDialog();
+                        saveFileDialog.Filter = "JSON (*.json)|*.json";
+                        if (saveFileDialog.ShowDialog() == true)
+                        {
+                            List<Dictionary<string, object>> saveRule = new List<Dictionary<string, object>>();
+
+                            foreach (IRule rule in _activeRule)
+                            {
+                                saveRule.Add(rule.CreateRecord());
+                            }
+
+                            JsonUtils.WriteJson(saveRule, saveFileDialog.FileNames[0]);
+                            System.Windows.Forms.MessageBox.Show("Save preset success");
+                        }
+                        break;
+                    case MessageBoxResult.No:
+                        break;
+                }
+                
+            }
+            
         }
     }
 }

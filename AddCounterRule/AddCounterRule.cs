@@ -10,7 +10,7 @@ using System.Windows.Markup;
 
 namespace AddCounterRule
 {
-    public class AddCounterRule : IRule
+    public class AddCounter : IRule
     {
         private int _current = 0;
         private int _start = 0;
@@ -29,12 +29,15 @@ namespace AddCounterRule
 
         public string Name => "Add Counter";
 
-        public AddCounterRule()
+        public AddCounter()
         {
             Start = 1;
             Step = 1;
             IsChecked = true;
         }
+
+
+
         public string Rename(string origin)
         {
             string currentString = _current.ToString();
@@ -65,21 +68,32 @@ namespace AddCounterRule
             
         }
 
-        public IRule Parse(string line)
-        {
-            var tokens = line.Split(new string[] { " " },
-                StringSplitOptions.None);
-            var data = tokens[1];
-            var attributes = data.Split(new string[] { "," },
-                StringSplitOptions.None);
-            var pairs0 = attributes[0].Split(new string[] { "=" },
-                StringSplitOptions.None);
-            var pairs1 = attributes[1].Split(new string[] { "=" },
-                StringSplitOptions.None);
 
-            var rule = new AddCounterRule();
-            rule.Start = int.Parse(pairs0[1]);
-            rule.Step = int.Parse(pairs1[1]);
+        public Dictionary<string, object> CreateRecord()
+        {
+            Dictionary<string, object> result = new Dictionary<string, object>();
+
+            result.Add("Name", Name);
+            result.Add("Start", Start);
+            result.Add("Step", Step);
+            result.Add("IsChecked", IsChecked);
+
+            return result;
+        }
+
+
+        public IRule Parse(Dictionary<string, object> data)
+        {
+            int start = Convert.ToInt32(data["Start"]);
+            int step = Convert.ToInt32(data["Step"]);
+            bool isCheck = (bool)data["IsChecked"];
+
+            var rule = new AddCounter
+            {
+                Start = start,
+                Step = step,
+                IsChecked = isCheck
+            };
 
             return rule;
         }

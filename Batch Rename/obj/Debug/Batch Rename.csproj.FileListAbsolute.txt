@@ -25,3 +25,27 @@ D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\obj\Debug\
 D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\obj\Debug\Batch Rename.GeneratedMSBuildEditorConfig.editorconfig
 D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\obj\Debug\Batch Rename.csproj.Fody.CopyLocal.cache
 D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\obj\Debug\Batch Rename.csproj.Fody.RuntimeCopyLocal.cache
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\bin\Debug\Newtonsoft.Json.Bson.dll
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\bin\Debug\Newtonsoft.Json.dll
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\bin\Debug\System.Buffers.dll
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\bin\Debug\System.Memory.dll
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\bin\Debug\System.Numerics.Vectors.dll
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\bin\Debug\System.Text.Encodings.Web.dll
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\bin\Debug\System.Text.Json.dll
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\bin\Debug\System.ValueTuple.dll
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\bin\Debug\Newtonsoft.Json.pdb
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\bin\Debug\Newtonsoft.Json.xml
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\bin\Debug\Newtonsoft.Json.Bson.pdb
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\bin\Debug\Newtonsoft.Json.Bson.xml
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\bin\Debug\System.Buffers.xml
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\bin\Debug\System.Memory.xml
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\bin\Debug\System.Numerics.Vectors.xml
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\bin\Debug\System.Text.Encodings.Web.xml
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\bin\Debug\System.Text.Json.xml
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Study\Tailieu\LapTrinhWindows\DoAn\DoAn1\Batch Rename\Batch Rename\bin\Debug\System.ValueTuple.xml

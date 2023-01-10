@@ -19,18 +19,27 @@ namespace ConvertPascalCaseRule
 
         public ConvertPascalCase()
         {
+            IsChecked = true;
         }
 
-        public IRule Parse(string data)
+        public Dictionary<string, object> CreateRecord()
         {
-            var tokens = data.Split(new string[] { " " },
-                StringSplitOptions.None);
-            var parsedData = tokens[1];
+            Dictionary<string, object> result = new Dictionary<string, object>();
 
-            var pairs = parsedData.Split(new string[] { "=" },
-                StringSplitOptions.None);
+            result.Add("Name", Name);
+            result.Add("IsChecked", IsChecked);
 
-            var rule = new ConvertPascalCase();
+            return result;
+        }
+
+        public IRule Parse(Dictionary<string, object> data)
+        {
+            bool isCheck = (bool)data["IsChecked"];
+
+            var rule = new ConvertPascalCase
+            {
+                IsChecked = isCheck
+            } ;
             return rule;
         }
 

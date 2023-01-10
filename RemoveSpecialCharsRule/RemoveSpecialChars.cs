@@ -24,10 +24,27 @@ namespace RemoveSpecialCharsRule
             IsChecked = true;
         }
 
-        public IRule Parse(string data)
+        public Dictionary<string, object> CreateRecord()
         {
-            RemoveSpecialChars result = new RemoveSpecialChars();
+            Dictionary<string, object> result = new Dictionary<string, object>();
 
+            result.Add("Name", Name);
+            result.Add("BlackList", BlackList);
+            result.Add("IsChecked", IsChecked);
+
+            return result;
+        }
+
+        public IRule Parse(Dictionary<string, object> data)
+        {
+            string blackList = (string)data["BlackList"];
+            bool isChecked = (bool)data["IsChecked"];
+
+            RemoveSpecialChars result = new RemoveSpecialChars
+            {
+                BlackList = blackList,
+                IsChecked = isChecked
+            };
             return result;
         }
 

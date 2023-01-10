@@ -27,19 +27,29 @@ namespace ReplaceCharacterRule
             IsChecked= true;
         }
 
-        public IRule Parse(string data)
+        public Dictionary<string, object> CreateRecord()
         {
-            var tokens = data.Split(new string[] { " " },
-                StringSplitOptions.None);
-            var parsedData = tokens[1];
+            Dictionary<string, object> result = new Dictionary<string, object>();
 
-            var pairs = parsedData.Split(new string[] { "=" },
-                StringSplitOptions.None);
+            result.Add("Name", Name);
+            result.Add("OldCharacter", OldCharacter);
+            result.Add("NewCharacter", NewCharacter);
+            result.Add("IsChecked", IsChecked);
+
+            return result;
+        }
+
+        public IRule Parse(Dictionary<string, object> data)
+        {
+            string oldCharacter = (string)data["OldCharacter"];
+            string newCharacter = (string)data["NewCharacter"];
+            bool isChecked = (bool)data["IsChecked"];
 
             var rule = new ReplaceCharacter
             {
-                OldCharacter = pairs[1],
-                NewCharacter = pairs[2],
+                OldCharacter = oldCharacter,
+                NewCharacter = newCharacter,
+                IsChecked = isChecked
             };
             return rule;
         }
@@ -98,20 +108,6 @@ namespace ReplaceCharacterRule
                                     <StackPanel Orientation=""Horizontal"" Height=""19"" Margin=""2"">
                                         <TextBlock FontSize=""12"" Text=""New character: ""></TextBlock>
                                         <TextBox Width=""120"" Text=""{Binding NewCharacter, UpdateSourceTrigger=PropertyChanged}""></TextBox>
-                                    </StackPanel>
-                                    <StackPanel  Orientation=""Horizontal"" Height=""19"" Margin=""2"">
-                                        <TextBlock FontSize=""12"" Text=""Apply to: ""></TextBlock>
-                                        <ComboBox SelectedIndex=""0"" Padding=""2,1,0,0"" Width=""115"">
-                                            <ComboBoxItem >
-                                                <TextBlock Text=""Name"" FontSize=""11""></TextBlock>
-                                            </ComboBoxItem>
-                                            <ComboBoxItem >
-                                                <TextBlock Text=""Extension"" FontSize=""11""></TextBlock>
-                                            </ComboBoxItem>
-                                            <ComboBoxItem >
-                                                <TextBlock Text=""All"" FontSize=""11""></TextBlock>
-                                            </ComboBoxItem>
-                                        </ComboBox>
                                     </StackPanel>
                                 </StackPanel>
                             </Border>

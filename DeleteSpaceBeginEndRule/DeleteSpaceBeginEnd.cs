@@ -23,21 +23,25 @@ namespace DeleteSpaceBeginEndRule
             IsChecked = true;
         }
 
+        public Dictionary<string, object> CreateRecord()
+        {
+            Dictionary<string, object> result = new Dictionary<string, object>();
+
+            result.Add("Name", Name);
+            result.Add("IsChecked", IsChecked);
+
+            return result;
+        }
+
         public object Clone()
         {
             return MemberwiseClone();
         }
 
-        public IRule Parse(string data)
+        public IRule Parse(Dictionary<string, object> data)
         {
-            var tokens = data.Split(new string[] { " " },
-              StringSplitOptions.None);
-            var parsedData = tokens[1];
-
-            var pairs = parsedData.Split(new string[] { "=" },
-                StringSplitOptions.None);
-
-            var rule = new DeleteSpaceBeginEnd();
+            bool isCheck = (bool)data["IsChecked"];
+            var rule = new DeleteSpaceBeginEnd { IsChecked = isCheck };
 
             return rule;
         }

@@ -7,6 +7,53 @@
         mc:Ignorable="d"
         Title="HelpWindown" Height="450" Width="800">
     <Grid>
-        
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/images/batch.png" Height="20" Width="20" RenderOptions.BitmapScalingMode="HighQuality"/>
+                <TextBlock Text=" : Thực hiện đổi tên" FontSize="18"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/images/add-rule.png" Height="20" Width="20" RenderOptions.BitmapScalingMode="HighQuality"/>
+                <TextBlock Text=" : Thêm 1 Rule mới" FontSize="18"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/images/delete.png" Height="20" Width="20" RenderOptions.BitmapScalingMode="HighQuality"/>
+                <TextBlock Text=" : Xóa tất cả Rule" FontSize="18"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/images/clear.png" Height="20" Width="20" RenderOptions.BitmapScalingMode="HighQuality"/>
+                <TextBlock Text=" : Xóa tất cả danh sách file và folder" FontSize="18"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/images/up(2).png" Height="20" Width="20" RenderOptions.BitmapScalingMode="HighQuality"/>
+                <Image Source="/images/up.png" Height="20" Width="20" RenderOptions.BitmapScalingMode="HighQuality"/>
+                <Image Source="/images/down.png" Height="20" Width="20" RenderOptions.BitmapScalingMode="HighQuality"/>
+                <Image Source="/images/down(2).png" Height="20" Width="20" RenderOptions.BitmapScalingMode="HighQuality"/>
+                <TextBlock Text=" : Di chuyển file hoặc Rule được chọn vào vị trí đầu tiên/lên 1 vị trí/xuống 1 vị trí/cuối cùng" FontSize="18"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/images/save.png" Height="20" Width="20" RenderOptions.BitmapScalingMode="HighQuality"/>
+                <TextBlock Text=" : Lưu preset rule hiện tại" FontSize="18"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/images/upload-file.png" Height="20" Width="20" RenderOptions.BitmapScalingMode="HighQuality"/>
+                <TextBlock Text=" : Tải file preset" FontSize="18"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/images/add.png" Height="20" Width="20" RenderOptions.BitmapScalingMode="HighQuality"/>
+                <TextBlock Text=" : Thêm file hoặc folder" FontSize="18"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/images/folder.png" Height="20" Width="20" RenderOptions.BitmapScalingMode="HighQuality"/>
+                <TextBlock Text=" : chọn tất cả file trong Folder" FontSize="18"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/images/preview.png" Height="20" Width="20" RenderOptions.BitmapScalingMode="HighQuality"/>
+                <TextBlock Text=" : Xem trước kết quả đổi tên" FontSize="18"></TextBlock>
+            </StackPanel>
+
+
+
+        </StackPanel>
     </Grid>
 </Window>
